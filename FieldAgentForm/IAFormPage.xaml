@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FieldAgentForm.IAFormPage">
+    <StackLayout  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+        <StackLayout x:Name="sl_municipality" Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+            <Editor x:Name="e_county" Text="COUNTY" Focused="clearCurrentData"/>
+            <Editor x:Name="e_municipality" Text="MUNICIPALITY" Focused="clearCurrentData"/>
+        </StackLayout>
+        <Editor x:Name="e_full_name" Text="FULL NAME" Focused="clearCurrentData"/>
+        <Editor x:Name="e_street_addr" Text="STREET ADDRESS" Focused="clearCurrentData"/>
+        <Editor x:Name="e_city" Text="CITY" Focused="clearCurrentData"/>
+        <StackLayout x:Name="sl_codes" Orientation="Horizontal">
+            <Editor x:Name="e_munic_code" Text="CODE" Focused="clearCurrentData"/>
+            <Label Text="PA"/>
+            <Editor x:Name="e_zipcode" Text="ZIPCODE" Focused="clearCurrentData"/>
+        </StackLayout>
+        <StackLayout x:Name="sl_coordinates" Orientation="Horizontal">
+            <Editor x:Name="e_lat" Text="LAT"/>
+            <Editor x:Name="e_long" Text="LONG"/>
+        </StackLayout>
+        <StackLayout x:Name="sl_location_details" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+            <StackLayout Orientation="Vertical">
+                <StackLayout x:Name="sl_owner_info" Orientation="Horizontal" >
+                    <Label Text="RESIDENT TYPE:"/>
+                    <Label Text="Primary Owner"/>
+                    <Switch x:Name="sw_owner"/>
+                    <Label Text="Renter"/>
+                </StackLayout>
+                <StackLayout x:Name="sl_location_info" Orientation="Horizontal">
+                    <Label Text="LOCATION TYPE:"/>
+                    <Label Text="Residential"/>
+                    <Switch x:Name="sw_location_type"/>
+                    <Label Text="Business"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                        <Picker x:Name="p_disaster_type" HorizontalOptions="Fill" SelectedIndex="0">
+                        <Picker.Items>
+                        <x:String>DISASTER TYPE</x:String>
+                        <x:String>Flood</x:String>
+                        <x:String>Fire</x:String>
+                        <x:String>Hurricane</x:String>
+                        <x:String>Tornado</x:String>
+                    </Picker.Items>
+                </Picker>
+                    <Picker x:Name="p_damage_category" HorizontalOptions="Fill" SelectedIndex="0">
+                        <Picker.Items>
+                            <x:String>DAMAGE CATEGORY</x:String>
+                            <x:String>Destroyed</x:String>
+                            <x:String>Major</x:String>
+                            <x:String>Minor</x:String>
+                            <x:String>Affected</x:String>
+                            <x:String>Inaccessible</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </StackLayout>
+            <Editor x:Name="e_notes" Text="LOCATION NOTES" Focused="clearCurrentData"/>
+        </StackLayout>
+        <Button x:Name="btn_next" Text="Detailed Damage Information"/>
+    </StackLayout>
+</ContentPage>

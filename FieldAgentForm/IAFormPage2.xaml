@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FieldAgentForm.IAFormPage2">
+    <StackLayout Orientation="Vertical">
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="System" Grid.Row ="0" Grid.Column="0"/>
+            <Label Text="Foundation" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Floor(Frame)" Grid.Row="2" Grid.Column="0" />
+            <Label Text="Exterior Walls" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="Roof" Grid.Row="4" Grid.Column="0" />
+            <Label Text="Interior Walls" Grid.Row="5" Grid.Column="0"/>
+            <Label Text="Plumbing" Grid.Row="6" Grid.Column="0" />
+            <Label Text="Heating/AC" Grid.Row="7" Grid.Column="0"/>
+    
+            <Label Text="Damage" Grid.Row="0" Grid.Column="1"/>
+            <Editor x:Name="e_damage_foundation" Grid.Row="1" Grid.Column="1" Text="0" />
+            <Editor x:Name="e_damage_floor" Grid.Row="2" Grid.Column="1" />
+            <Editor x:Name="e_damage_exterior" Grid.Row="3" Grid.Column="1"/>
+            <Editor x:Name="e_damage_roof" Grid.Row="4" Grid.Column="1" />
+            <Editor x:Name="e_damage_interior" Grid.Row="5" Grid.Column="1"/>
+            <Editor x:Name="e_damage_plumbing" Grid.Row="6" Grid.Column="1" />
+            <Editor x:Name="e_damage_heating" Grid.Row="7" Grid.Column="1"/>
+
+            <Label Text="R.C. %" Grid.Row="0" Grid.Column="2" />
+            <Editor x:Name="e_percent_foundation" Grid.Row="1" Grid.Column="2" />
+            <Editor x:Name="e_percent_floor" Grid.Row="2" Grid.Column="2"  Opacity="85"/>
+            <Editor x:Name="e_percent_exterior" Grid.Row="3" Grid.Column="2"/>
+            <Editor x:Name="e_percent_roof" Grid.Row="4" Grid.Column="2"  Opacity="85"/>
+            <Editor x:Name="e_percent_interior" Grid.Row="5" Grid.Column="2"/>
+            <Editor x:Name="e_percent_plumbing" Grid.Row="6" Grid.Column="2"  Opacity="85"/>
+            <Editor x:Name="e_percent_heating" Grid.Row="7" Grid.Column="2"/>
+        </Grid>
+        <StackLayout x:Name="sl_insurance_types">
+            <StackLayout Orientation="Vertical">
+                <Label Text="Flood"/>
+                <Switch x:Name="sw_flood_insurance"/>
+            </StackLayout>
+        </StackLayout>
+        <Button x:Name="btn_photos" Clicked="btn_photos_Clicked" Text="Take Pictures of Damage"/>                       
+    </StackLayout>
+        
+</ContentPage>  
